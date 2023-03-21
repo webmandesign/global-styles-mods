@@ -1,4 +1,4 @@
-=== Global Styles Mods - WordPress 5.9 fix ===
+# === Global Styles Mods - WordPress 5.9 fix ===
 Contributors:      webmandesign
 Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://github.com/webmandesign/global-styles-mods
@@ -14,7 +14,7 @@ Tags:              global styles, fix, Gutenberg, wp5.9, font size, colors
 Fixes styling issues in WordPress 5.9 modifying global styles code.
 
 
-== Description ==
+# == Description ==
 
 = Plugin's purpose =
 
@@ -36,7 +36,7 @@ This plugin fixes styling issues introduced in WordPress 5.9.
 - Your theme is [full site editing (FSE) ready](https://wordpress.org/news/2022/01/josephine/)
 - You don't experience any font size or color issues on your website after updating to WordPress 5.9
 
-= Technical info =
+# = Technical info =
 
 WordPress 5.9 started applying `!important` rule and is setting up CSS properties (CSS variables) within `body` selector in its global styles code. This rises the global styles specificity and may override styles coming from themes and plugins. (For more info about this change check ["Updates for Settings, Styles, and theme.json" article](https://make.wordpress.org/core/2022/01/08/updates-for-settings-styles-and-theme-json/#changes-to-the-global-stylesheet).)
 
@@ -47,14 +47,14 @@ It also enqueues the global styles early enough so your theme or plugin styleshe
 The fix applied is coming from issue [conversation in Gutenberg GitHub repository](https://github.com/WordPress/gutenberg/issues/38252#issuecomment-1024348024).
 
 
-== Installation ==
+# == Installation ==
 
 1. Unzip the plugin download file and upload `global-styles-mods` folder into the `/wp-content/plugins/` directory.
 2. Activate the plugin through the *"Plugins"* menu in WordPress.
 3. Plugin has no options and works immediately after activation. The plugin requires WordPress of version 5.9 to run. If you experienced issues with font sizes and/or colors after updating to WordPress 5.9, this plugin should fix them - that's how you know the plugin is working.
 
 
-== Frequently Asked Questions ==
+# == Frequently Asked Questions ==
 
 = It does not work, help! =
 
@@ -65,17 +65,17 @@ Also, it works quietly behind the scenes and simply modifies WordPress global CS
 If you experienced issues with font sizes and/or colors after updating to WordPress 5.9, this plugin should fix them - that's how you know the plugin is doing its magic.
 
 
-== Screenshots ==
+# == Screenshots ==
 
 1. Issues with font sizes after WordPress 5.9 update.
 
 
-== Changelog ==
+# == Changelog ==
 
 Please see the [`changelog.md` file](https://github.com/webmandesign/global-styles-mods/blob/master/changelog.md) for details.
 
 
-== Upgrade Notice ==
+# == Upgrade Notice ==
 
 = 1.0.0 =
 Initial release.
