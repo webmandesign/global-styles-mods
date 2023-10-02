@@ -4,9 +4,9 @@ Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://github.com/webmandesign/global-styles-mods
 Donate link:       https://www.webmandesign.eu/contact/#donation
 Requires at least: 5.9
-Tested up to:      5.9
+Tested up to:      6.3
 Requires PHP:      7.0
-Stable tag:        1.0.0
+Stable tag:        1.1.0
 License:           GNU General Public License v3
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              global styles, fix, Gutenberg, wp5.9, font size, colors
@@ -76,6 +76,9 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/global-styl
 
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Added compatibility with Gutenberg plugin.
 
 = 1.0.0 =
 Initial release.

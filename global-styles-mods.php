@@ -3,7 +3,7 @@
  * Plugin Name:  Global Styles Mods
  * Plugin URI:   https://github.com/webmandesign/global-styles-mods
  * Description:  Lowers specificity of WordPress 5.9+ global styles by removing `!important` rule and using `:root` instead of `body` selector for setting up CSS properties.
- * Version:      1.0.0
+ * Version:      1.1.0
  * Author:       WebMan Design, Oliver Juhas
  * Author URI:   https://www.webmandesign.eu/
  * License:      GNU General Public License v3
@@ -67,7 +67,9 @@ class WebMan_Global_Styles_Mods {
 	 * and enqueues them again but earlier and modified.
 	 * Modifies also editor (Gutenberg) global styles.
 	 *
-	 * @since   1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
+	 *
 	 * @return  void
 	 */
 	public static function init() {
@@ -85,6 +87,7 @@ class WebMan_Global_Styles_Mods {
 			// Actions
 
 				remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+				remove_action( 'wp_enqueue_scripts', 'gutenberg_enqueue_global_styles' );
 
 				add_action( 'wp_enqueue_scripts', __CLASS__ . '::enqueue', (int) self::$priority );
 
@@ -97,14 +100,17 @@ class WebMan_Global_Styles_Mods {
 	/**
 	 * Re-registers and enqueues modified global stylesheet.
 	 *
-	 * @since   1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
+	 *
 	 * @return  void
 	 */
 	public static function enqueue() {
 
 		// Variables
 
-			$stylesheet = self::get_css_mod( wp_get_global_stylesheet() );
+			$css        = ( is_callable( 'gutenberg_get_global_stylesheet' ) ) ? ( gutenberg_get_global_stylesheet() ) : ( wp_get_global_stylesheet() );
+			$stylesheet = self::get_css_mod( $css );
 
 
 		// Requirements check
@@ -127,8 +133,10 @@ class WebMan_Global_Styles_Mods {
 	 *
 	 * CSS is being modified here.
 	 *
-	 * @since   1.0.0
-	 * @param   array $editor_settings
+	 * @since  1.0.0
+	 *
+	 * @param  array $editor_settings
+	 *
 	 * @return  array
 	 */
 	public static function get_editor_settings_mod( array $editor_settings ): array {
@@ -165,8 +173,10 @@ class WebMan_Global_Styles_Mods {
 	/**
 	 * Gets modified CSS styles string.
 	 *
-	 * @since   1.0.0
-	 * @param   string $css
+	 * @since  1.0.0
+	 *
+	 * @param  string $css
+	 *
 	 * @return  string
 	 */
 	public static function get_css_mod( string $css ): string {
