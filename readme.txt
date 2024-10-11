@@ -1,15 +1,16 @@
 === Global Styles Mods - WordPress 5.9 fix ===
+
 Contributors:      webmandesign
-Author URI:        https://www.webmandesign.eu
-Plugin URI:        https://github.com/webmandesign/global-styles-mods
 Donate link:       https://www.webmandesign.eu/contact/#donation
+Author URI:        https://www.webmandesign.eu
+Plugin URI:        https://github.com/webmandesign/global-styles-mods-wordpress-plugin/
 Requires at least: 5.9
-Tested up to:      6.3
+Tested up to:      6.7
 Requires PHP:      7.0
 Stable tag:        1.1.0
-License:           GNU General Public License v3
+License:           GPL-3.0-or-later
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
-Tags:              global styles, fix, Gutenberg, wp5.9, font size, colors
+Tags:              global styles, fix, Gutenberg, font size, colors
 
 Fixes styling issues in WordPress 5.9 modifying global styles code.
 

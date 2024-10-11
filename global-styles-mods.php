@@ -6,7 +6,7 @@
  * Version:      1.1.0
  * Author:       WebMan Design, Oliver Juhas
  * Author URI:   https://www.webmandesign.eu/
- * License:      GNU General Public License v3
+ * License:      GPL-3.0-or-later
  * License URI:  http://www.gnu.org/licenses/gpl-3.0.txt
  *
  * Requires at least: 5.9
